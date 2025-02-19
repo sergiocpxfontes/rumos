@@ -6,9 +6,9 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS publish
 WORKDIR /src
 COPY . . 
-RUN dotnet restore WebApplication.csproj
-RUN dotnet build WebApplication.csproj -c Release -o /publish/
-RUN dotnet publish WebApplication.csproj -c Release -o /publish/
+RUN dotnet restore WebApplication1.csproj
+RUN dotnet build WebApplication1.csproj -c Release -o /publish/
+RUN dotnet publish WebApplication1.csproj -c Release -o /publish/
 
 FROM base AS final
 WORKDIR /app
