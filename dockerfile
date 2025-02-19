@@ -3,7 +3,7 @@ WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/donet/sdk:5.0 as publish
+FROM mcr.microsoft.com/donet/sdk:5.0 AS publish
 WORKDIR /src
 COPY . . 
 RUN dotnet restore WebApplication.csproj
